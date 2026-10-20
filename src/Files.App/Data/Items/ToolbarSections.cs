@@ -34,6 +34,7 @@ namespace Files.App.Data.Items
 					new(commandCode: nameof(CommandCodes.ShareItem)),
 					new(commandCode: nameof(CommandCodes.DeleteItem)),
 					new(commandCode: nameof(CommandCodes.OpenProperties)),
+					new(commandCode: nameof(CommandCodes.ToggleCalculateFolderSizes)),
 				],
 				[ArchiveFilesContextId] = [new(commandGroup: nameof(CommandGroups.Extract), showLabel: true)],
 				[BatchFilesContextId] = [new(commandCode: nameof(CommandCodes.EditInNotepad), showLabel: true)],
