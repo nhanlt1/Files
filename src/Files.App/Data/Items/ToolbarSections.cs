@@ -29,14 +29,14 @@ namespace Files.App.Data.Items
 					new(commandCode: ToolbarItemDescriptor.SeparatorCommandCode, showIcon: false),
 					new(commandCode: nameof(CommandCodes.CutItem)),
 					new(commandCode: nameof(CommandCodes.CopyItem)),
-					new(commandCode: nameof(CommandCodes.RobocopyItem), showLabel: true),
 					new(commandCode: nameof(CommandCodes.PasteItem)),
 					new(commandCode: nameof(CommandCodes.Rename)),
 					new(commandCode: nameof(CommandCodes.ShareItem)),
 					new(commandCode: nameof(CommandCodes.DeleteItem)),
-					new(commandCode: nameof(CommandCodes.DeleteItemPermanently), showLabel: true),
 					new(commandCode: nameof(CommandCodes.OpenProperties)),
 					new(commandCode: nameof(CommandCodes.ToggleCalculateFolderSizes)),
+					new(commandCode: ToolbarItemDescriptor.SeparatorCommandCode, showIcon: false),
+					new(commandGroup: nameof(CommandGroups.RoboTools), showLabel: true),
 				],
 				[ArchiveFilesContextId] = [new(commandGroup: nameof(CommandGroups.Extract), showLabel: true)],
 				[BatchFilesContextId] = [new(commandCode: nameof(CommandCodes.EditInNotepad), showLabel: true)],
@@ -83,6 +83,21 @@ namespace Files.App.Data.Items
 			var currentIds = ContextOrder.ToDictionary(id => id, id => (DefaultItemsByContext.GetValueOrDefault(id) ?? [])
 				.Select(e => e.CommandCode ?? e.CommandGroup).OfType<string>().ToList(), StringComparer.Ordinal);
 			var previous = settings.LastKnownToolbarDefaults;
+
+			if (hasExisting && previous?.Values.Any(ids => ids.Contains(nameof(CommandGroups.RoboTools))) is not true)
+			{
+				foreach (var list in items.Values)
+					list.RemoveAll(entry => entry.CommandCode is nameof(CommandCodes.RobocopyItem) or nameof(CommandCodes.DeleteItemPermanently));
+
+				if (!items.TryGetValue(AlwaysVisibleContextId, out var alwaysVisible))
+					items[AlwaysVisibleContextId] = alwaysVisible = [];
+				if (!alwaysVisible.Any(entry => entry.CommandGroup == nameof(CommandGroups.RoboTools)))
+				{
+					alwaysVisible.Add(new(commandCode: ToolbarItemDescriptor.SeparatorCommandCode, showIcon: false));
+					alwaysVisible.Add(new(commandGroup: nameof(CommandGroups.RoboTools), showLabel: true));
+				}
+				settings.CustomToolbarItems = items;
+			}
 
 			if (hasExisting
 				&& previous is { Count: > 0 }

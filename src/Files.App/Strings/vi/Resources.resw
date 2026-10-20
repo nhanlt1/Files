@@ -4758,4 +4758,10 @@
   <data name="RobocopyCompleted" xml:space="preserve">
     <value>Robocopy đã hoàn tất đến {0}. Các tệp đã tồn tại được bỏ qua.</value>
   </data>
+  <data name="RoboToolsLabel" xml:space="preserve">
+    <value>Công cụ Robo (nguy hiểm)</value>
+  </data>
+  <data name="RoboToolsDescription" xml:space="preserve">
+    <value>Robocopy và Robodelete (xóa vĩnh viễn). Hãy thận trọng khi sử dụng.</value>
+  </data>
 </root>

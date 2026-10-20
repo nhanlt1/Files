@@ -3,6 +3,21 @@
 
 namespace Files.App.Data.Commands;
 
+internal sealed class RoboToolsCommandGroup : CommandGroup
+{
+	public override string Name => "RoboTools";
+	public override string DisplayName => Strings.RoboToolsLabel.GetLocalizedResource();
+	public override string Description => Strings.RoboToolsDescription.GetLocalizedResource();
+	public override RichGlyph Glyph => new("\uE7BA");
+	public override string AccessKey => string.Empty;
+	public override ActionCategory Category => ActionCategory.FileSystem;
+	public override string AutomationId => "RoboToolsButton";
+	public override IReadOnlyList<CommandCodes> Commands => (CommandCodes[])[
+		CommandCodes.RobocopyItem,
+		CommandCodes.DeleteItemPermanently,
+	];
+}
+
 internal sealed class ExtractCommandGroup : CommandGroup
 {
 	public override string Name => "Extract";

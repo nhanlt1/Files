@@ -4758,4 +4758,10 @@
   <data name="RobocopyCompleted" xml:space="preserve">
     <value>Robocopy completed to {0}. Existing files were skipped.</value>
   </data>
+  <data name="RoboToolsLabel" xml:space="preserve">
+    <value>Robo tools (dangerous)</value>
+  </data>
+  <data name="RoboToolsDescription" xml:space="preserve">
+    <value>Robocopy and Robodelete (permanent deletion). Use these tools with care.</value>
+  </data>
 </root>
