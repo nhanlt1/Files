@@ -64,6 +64,11 @@ namespace Files.App.Extensions
 
 		private static readonly Dictionary<string, string> abbreviations = new()
 		{
+			{ ByteSize.KibiByteSymbol, Strings.KiloByteSymbol },
+			{ ByteSize.MebiByteSymbol, Strings.MegaByteSymbol },
+			{ ByteSize.GibiByteSymbol, Strings.GigaByteSymbol },
+			{ ByteSize.TebiByteSymbol, Strings.TeraByteSymbol },
+			{ ByteSize.PebiByteSymbol, Strings.PetaByteSymbol },
 			{ ByteSize.KiloByteSymbol, Strings.KiloByteSymbol },
 			{ ByteSize.MegaByteSymbol, Strings.MegaByteSymbol },
 			{ ByteSize.GigaByteSymbol, Strings.GigaByteSymbol },
