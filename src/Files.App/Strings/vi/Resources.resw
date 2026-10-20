@@ -4740,4 +4740,22 @@
   <data name="ConfirmRemoveTagsDialogContent" xml:space="preserve">
     <value>Bạn có chắc chắn muốn gỡ bỏ nhãn khỏi khoản mục đã chọn không?</value>
   </data>
+  <data name="RobocopyLabel" xml:space="preserve">
+    <value>Robocopy</value>
+  </data>
+  <data name="RobocopyDescription" xml:space="preserve">
+    <value>Sao chép tệp và thư mục đã chọn bằng Robocopy, bỏ qua tệp đã tồn tại</value>
+  </data>
+  <data name="RobocopyInvalidDestination" xml:space="preserve">
+    <value>Chọn đích khác nằm ngoài các thư mục nguồn. Thao tác này không hỗ trợ sao chép toàn bộ gốc ổ đĩa.</value>
+  </data>
+  <data name="RobocopyConfirm" xml:space="preserve">
+    <value>Sao chép {0} mục đã chọn đến {1}? Tệp đã tồn tại sẽ được bỏ qua. Cửa sổ Robocopy hiển thị tiến trình; đóng cửa sổ đó để dừng lượt sao chép hiện tại.</value>
+  </data>
+  <data name="RobocopyFailed" xml:space="preserve">
+    <value>Robocopy chưa hoàn tất. Một số tệp có thể đã được sao chép.</value>
+  </data>
+  <data name="RobocopyCompleted" xml:space="preserve">
+    <value>Robocopy đã hoàn tất đến {0}. Các tệp đã tồn tại được bỏ qua.</value>
+  </data>
 </root>

@@ -4740,4 +4740,22 @@
   <data name="ConfirmRemoveTagsDialogContent" xml:space="preserve">
     <value>Are you sure you want to remove tags from the selected items?</value>
   </data>
+  <data name="RobocopyLabel" xml:space="preserve">
+    <value>Robocopy</value>
+  </data>
+  <data name="RobocopyDescription" xml:space="preserve">
+    <value>Copy selected files and folders with Robocopy, skipping files that already exist</value>
+  </data>
+  <data name="RobocopyInvalidDestination" xml:space="preserve">
+    <value>Choose a different destination outside the source folders. Drive roots cannot be copied with this action.</value>
+  </data>
+  <data name="RobocopyConfirm" xml:space="preserve">
+    <value>Copy {0} selected items to {1}? Existing files will be skipped. A Robocopy window will display progress; closing it stops the current copy.</value>
+  </data>
+  <data name="RobocopyFailed" xml:space="preserve">
+    <value>Robocopy did not complete. Some files may already have been copied.</value>
+  </data>
+  <data name="RobocopyCompleted" xml:space="preserve">
+    <value>Robocopy completed to {0}. Existing files were skipped.</value>
+  </data>
 </root>

@@ -18,6 +18,9 @@ namespace Files.App.Actions
 		public string AccessKey
 			=> "D";
 
+		public RichGlyph Glyph
+			=> new(themedIconStyle: "App.ThemedIcons.Delete");
+
 		public HotKey HotKey
 			=> new(Keys.Delete, KeyModifiers.Shift);
 
